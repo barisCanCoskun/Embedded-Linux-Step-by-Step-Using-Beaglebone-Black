@@ -1,0 +1,46 @@
+
+*************************cross toolchain installation***************************
+
+Step 1: Download arm cross toolchain for your Host machine
+
+https://releases.linaro.org/components/toolchain/binaries/latest-5/arm-linux-gnueabihf/
+
+Step 2: export path of the cross compilation toolchain
+
+export PATH=$PATH:/home/baris/barisCan/Udemy/FastBit-Embedded/Embedded-Linux/section10-U-boot/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin
+
+
+*************************U-boot compilation***************************
+
+Step 1: distclean : deletes all the previously compiled/generated object files.
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- distclean 
+
+Step 2: apply board default configuration for uboot
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- am335x_boneblack_defconfig
+
+Step 3: run menuconfig, if you want to do any settings other than default configuration.
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+
+Step4: compile
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 // -j4(4 core machine) will instruct the make tool to spawn 4 threads 
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j8 // -j8(8 core machine) will instruct the make tool to spawn 8 threads 
+
+************************* end ***************************
+
+
+
+
+
+*************************cross toolchain installation***************************
+
+
+
+
+
+
+
+

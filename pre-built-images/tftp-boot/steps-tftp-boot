@@ -1,0 +1,22 @@
+steps tftp boot
+
+setenv serverip 192.168.27.1 
+setenv ipaddr 192.168.27.2  
+
+ping 192.168.27.1 
+
+1)loading uImage
+tftpboot 0x82000000 uImage 
+
+2)loading dtb
+tftpboot 0x88000000 am335x-boneblack.dtb
+
+3)loading initramfs
+tftpboot 0x88080000 initramfs
+
+4)set bootargs
+setenv bootargs console=ttyO0,115200n8 root=/dev/ram0 rw initrd=0x88080000
+
+bootm 0x82000000 0x88080000 0x88000000
+
+

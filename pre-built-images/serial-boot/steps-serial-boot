@@ -1,0 +1,12 @@
+Recommended load addresses
+
+Binary				DDR RAM load address
+Linux kernel image(uImage)	0x82000000
+FDT or DTB			0x88000000
+RAMDISK OR INITRAMFS		0x88080000
+
+setenv bootargs console=ttyO0,115200n8 root=/dev/ram0 rw initrd=0x88080000
+
+bootm 0x82000000 0x88080000 0x88000000
+
+

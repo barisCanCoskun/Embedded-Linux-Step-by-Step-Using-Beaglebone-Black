@@ -1,0 +1,27 @@
+
+steps to boot beaglebone
+
+loaded the linux kernel image to the DDR mem from SD card
+load mmc 0:2 0x82000000 /boot/uImage
+
+loaded the dtb image to the DDR mem from SD card
+load mmc 0:2 0x88000000 /boot/am335x-boneblack.dtb
+
+send bootargs to the linux kernel from uboot
+setenv bootargs console=ttyO0,115200 root=/dev/mmcblk0p2 rw
+
+boot from memory command
+
+bootm 0x82000000 - 0x88000000
+--------------------------------------------------------
+
+loadx 
+select uEnv.txt
+
+command to import env variables from mem address
+env import -t <mem address> <size in bytes>
+
+boot
+
+
+

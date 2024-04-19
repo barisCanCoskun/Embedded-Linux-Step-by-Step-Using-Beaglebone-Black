@@ -1,0 +1,14 @@
+
+************************* NFS mounting ***************************
+
+sudo apt-get install nfs-kernel-server
+
+sudo nano /etc/exports
+
+/srv/nfs/bbb 192.168.27.2(rw,sync,no_root_squash,no_subtree_check)
+
+sudo exportfs -a
+sudo exportfs -rv
+sudo service nfs-kernel-server restart
+
+************************* end ***************************

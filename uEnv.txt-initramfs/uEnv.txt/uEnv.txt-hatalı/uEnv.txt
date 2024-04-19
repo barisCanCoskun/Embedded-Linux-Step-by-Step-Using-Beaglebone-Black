@@ -1,0 +1,7 @@
+mypcip=setenv serverip 192.168.1.2
+ipaddr=192.168.27.1
+loadaddr=0x82000000
+fdtaddr=0x88000000
+bootargs=console=ttyO0,115200n8 root=/dev/mmcblk0p2 rw
+bootcmd=echo"**********Booting from Baris's SD Card**********";load mmc 0:2 ${loadaddr} /boot/uImage;load mmc 0:2 ${fdtaddr} /boot/am335x-boneblack.dtb;bootm ${loadaddr} - ${fdtaddr}
+

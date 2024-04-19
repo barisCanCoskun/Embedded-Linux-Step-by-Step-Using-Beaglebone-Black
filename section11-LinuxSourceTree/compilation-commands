@@ -1,0 +1,30 @@
+
+************************* linux compilation ***************************
+
+download official kernel source from here :github beagleboard linux
+
+Step 1:
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- distclean 
+
+Step 2:
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bb.org_defconfig (for 4.4)
+***for kernel version 4.11 (mine is 6.6) use omap2plus_defconfig
+
+Step 3:
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+
+Step 4:
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0X80008000 -j4 
+
+Step 5:
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 modules
+
+Step 6:
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=<path of the RFS> modules_install
+
+
+************************* end ***************************
+
+
+
+

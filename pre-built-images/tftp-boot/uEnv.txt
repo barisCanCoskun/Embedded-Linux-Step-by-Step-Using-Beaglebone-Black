@@ -1,0 +1,10 @@
+console=ttyO0,115200n8
+serverip=192.168.27.1
+ipaddr=192.168.27.2
+loadaddr=0x82000000
+fdtaddr=0x88000000
+initrdaddr=0x88080000
+loadtftp=echo Booting from network ...;tftpboot ${loadaddr} uImage; tftpboot ${fdtaddr} am335x-boneblack.dtb; tftpboot ${initrdaddr} initramfs
+linuxbootargs=setenv bootargs console=${console} root=/dev/ram0 rw initrd=${initrdaddr}
+uenvcmd=setenv autoload no; run loadtftp; run linuxbootargs; bootm ${loadaddr} ${initrdaddr} ${fdtaddr}
+

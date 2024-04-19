@@ -1,0 +1,21 @@
+
+************************* Busy box compilation ***************************
+
+Step 1:
+download busybox: https://busybox.net/downloads/
+
+Step 2: Apply default config
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- defconfig 
+
+Step 3: change default settings if you want
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+
+Step 4: generate the busy box binary and minimal file system
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- CONFIG_PREFIX=<install_path> install
+
+
+************************* end ***************************
+
+
+
+

@@ -1,0 +1,2 @@
+/usr/bin/chrt
+/bin/busybox.nosuid 50

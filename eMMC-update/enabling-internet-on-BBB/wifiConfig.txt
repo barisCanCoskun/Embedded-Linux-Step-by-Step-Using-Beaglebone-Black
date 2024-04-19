@@ -1,0 +1,9 @@
+iptables --table nat --append POSTROUTING --out-interface wlp3s0 -j MASQUERADE
+
+iptables --append FORWARD --in-interface enxe415f6f56f75 -j ACCEPT
+
+wlp3s0
+
+enxe415f6f56f75
+
+enxe415f6f56f77

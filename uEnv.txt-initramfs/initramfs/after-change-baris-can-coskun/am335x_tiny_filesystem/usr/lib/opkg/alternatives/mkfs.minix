@@ -1,0 +1,2 @@
+/sbin/mkfs.minix
+/bin/busybox.nosuid 50
