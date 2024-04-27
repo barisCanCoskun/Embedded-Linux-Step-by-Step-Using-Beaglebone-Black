@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1323611861/PATH/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1323611861/PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1323611861/PATH/value=/home/baris/barisCan/Udemy/FastBit-Embedded/Embedded-Linux/section10-U-boot/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin\:/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/usr/games\:/usr/local/games\:/snap/bin\:/snap/bin\:/usr/lib/jvm/java-17-oracle/bin\:/usr/lib/jvm/java-17-oracle/db/bin
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1323611861/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1323611861/appendContributed=true

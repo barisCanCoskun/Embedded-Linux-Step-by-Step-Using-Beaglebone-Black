@@ -8,7 +8,7 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- distclean
 
 Step 2:
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bb.org_defconfig (for 4.4)
-***for kernel version 4.11 (mine is 6.6) use omap2plus_defconfig
+***for kernel version 4.11 and later(mine is 6.6) use omap2plus_defconfig
 
 Step 3:
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
